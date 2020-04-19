@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="hibernate.connection.password">admin</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost/slateboard</property>
+		<property name="hibernate.connection.username">slateboard_admin</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<mapping class="com.mycompany.slateboard.pojo.Professor" />
+		<mapping class="com.mycompany.slateboard.pojo.Student" />
+		<mapping class="com.mycompany.slateboard.pojo.Course" />
+		<mapping class="com.mycompany.slateboard.pojo.StudentCourse" />
+		<mapping class="com.mycompany.slateboard.pojo.TeachingAssistant" />
+		<mapping class="com.mycompany.slateboard.pojo.TeachingAssistantCourse" />
+		<mapping class="com.mycompany.slateboard.pojo.Assignment" />
+		<mapping class="com.mycompany.slateboard.pojo.StudentAssignment" />
+		<mapping class="com.mycompany.slateboard.pojo.CourseMaterial" />
+		<mapping class="com.mycompany.slateboard.pojo.Admin" />
+
+	</session-factory>
+</hibernate-configuration>
