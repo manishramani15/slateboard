@@ -34,9 +34,20 @@ public class Assignment {
 	@Column(name = "notes")
 	private String notes;
 	
+	@Column(name = "days_to_deadline")
+	private Integer daysToDeadline;
+
 	@Transient
 	private CommonsMultipartFile fileAttached;
 	
+	public Integer getDaysToDeadline() {
+		return daysToDeadline;
+	}
+
+	public void setDaysToDeadline(Integer daysToDeadline) {
+		this.daysToDeadline = daysToDeadline;
+	}
+
 	public CommonsMultipartFile getFileAttached() {
 		return fileAttached;
 	}

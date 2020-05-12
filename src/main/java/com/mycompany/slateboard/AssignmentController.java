@@ -108,9 +108,10 @@ public class AssignmentController {
 		
 		assignment.setNotes(request.getParameter("notes"));
 		assignment.setCourse(course);
-		//add due date in future
+		Integer daysToDeadline = Integer.parseInt(request.getParameter("daysToDeadline"));
+		assignment.setDaysToDeadline(daysToDeadline);
 		AssignmentDao assignmentDao = new AssignmentDao();
-		boolean res = assignmentDao.addAssignment(filename, request.getParameter("notes"), course);
+		boolean res = assignmentDao.addAssignment(filename, request.getParameter("notes"), course, daysToDeadline);
 
 		if(!res) {
 			return "post-assignment";

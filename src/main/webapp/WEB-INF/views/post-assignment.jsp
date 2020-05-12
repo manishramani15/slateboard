@@ -238,13 +238,20 @@
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="file">File:</label>
 				<div class="col-sm-10">
-					<input type="file" class="form-control" id="file" name="fileAttached">
+					<input type="file" class="form-control" id="file" name="fileAttached" required="true">
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="notes">Comments(Notes):</label>
 				<div class="col-sm-10">
-					<form:input type="textArea" class="form-control" rows="5" id="notes" path="notes"></form:input>
+					<form:input type="textArea" class="form-control" rows="5" id="notes" path="notes" required="true"></form:input>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="daysToDeadline">Days To Deadline</label>
+				<div class="col-sm-10">
+					<form:input type="number" class="form-control" id="daysToDeadline" path="daysToDeadline" min="0" required="true"></form:input>
 				</div>
 			</div>
 			<div class="form-group">

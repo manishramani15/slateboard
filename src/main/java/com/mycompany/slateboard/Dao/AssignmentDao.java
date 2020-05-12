@@ -1,5 +1,7 @@
 package com.mycompany.slateboard.Dao;
 
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 
 import org.hibernate.HibernateException;
@@ -12,13 +14,14 @@ import com.mycompany.slateboard.pojo.Professor;
 
 public class AssignmentDao extends DAO {
 
-	public boolean addAssignment(String filePath, String notes, Course course) {
+	public boolean addAssignment(String filePath, String notes, Course course, Integer daysToDeadline) {
 		boolean result = false;
         try {
             Assignment assignment = new Assignment();
             assignment.setFilePath(filePath);
             assignment.setNotes(notes);
             assignment.setCourse(course);
+            assignment.setDaysToDeadline(daysToDeadline);
         	begin();
             getSession().save(assignment);
             commit();

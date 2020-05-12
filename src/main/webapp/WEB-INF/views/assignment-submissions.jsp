@@ -272,7 +272,7 @@
 								</div>
 								<div class="modal-body">
 									<form action="set-grade.htm" method="post">
-										<input type="number" name="grade" min="0" max="100"></br> <input
+										<input type="number" name="grade" min="0" max="100" required></br> <input
 											type="hidden" name="id"
 											value="<%=studentAssignment.getId()%>">
 										<!--  getId not working  -->

@@ -9,9 +9,9 @@
 <body>
 <form method="post" action="admin-login.htm">
 	<label>Login Id: </label>
-	<input type="text" name="admin_id"><br>
+	<input type="text" name="admin_id" required><br>
 	<label>Password: </label>
-	<input type="password" name="admin_password"><br>
+	<input type="password" name="admin_password" required><br>
 	<input type="submit" value="LOGIN">
 </form>
 </body>

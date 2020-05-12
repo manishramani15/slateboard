@@ -261,7 +261,7 @@
 				<label class="control-label col-sm-2" for="file">File:</label>
 				<div class="col-sm-10">
 					<input type="file" class="form-control" id="file"
-						name="fileAttached" required>
+						name="fileAttached" required="true">
 				</div>
 			</div>
 			<div class="form-group">

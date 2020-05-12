@@ -280,7 +280,7 @@
 							<div class="modal-body">
 								<form action="set-credits-achieved.htm" method="post">
 									<input type="number" name="creditsAchieved" min="0"
-										max="<%=studentCourse.getCourse().getCredits()%>"></br> <input
+										max="<%=studentCourse.getCourse().getCredits()%>" required></br> <input
 										type="hidden" name="id" value="<%=studentCourse.getId()%>">
 									<!--  getId not working  -->
 									<input type="hidden" name="studentId"

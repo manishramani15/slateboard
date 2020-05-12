@@ -150,7 +150,7 @@ public class StudentController {
 		Assignment assignment = ad.getAssignment(assignmentId);
 		Instant instant = Instant.ofEpochMilli(assignment.getCreatedAt().getTime());
 		LocalDateTime uploadedOn = LocalDateTime.ofInstant(instant, ZoneId.systemDefault());
-		LocalDateTime deadline = LocalDateTime.ofInstant(instant, ZoneId.systemDefault()).plusDays(7); //deadline can be taken from one to one mapping table
+		LocalDateTime deadline = LocalDateTime.ofInstant(instant, ZoneId.systemDefault()).plusDays(assignment.getDaysToDeadline()); //deadline can be taken from one to one mapping table
 		if(deadline.isBefore(LocalDateTime.now())) {
 			String message = "deadline";
 			return "redirect:/submit-assignment.htm?message=" + message;

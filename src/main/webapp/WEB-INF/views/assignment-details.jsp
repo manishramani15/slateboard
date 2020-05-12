@@ -243,7 +243,8 @@
 				for (Assignment assignment : assignments) {
 					Instant instant = Instant.ofEpochMilli(assignment.getCreatedAt().getTime());
 					LocalDateTime uploadedOn = LocalDateTime.ofInstant(instant, ZoneId.systemDefault());
-					LocalDateTime deadline = LocalDateTime.ofInstant(instant, ZoneId.systemDefault()).plusDays(7);
+					Integer daysToDeadline = assignment.getDaysToDeadline();
+					LocalDateTime deadline = LocalDateTime.ofInstant(instant, ZoneId.systemDefault()).plusDays(daysToDeadline);
 			%>
 			<div class="card">
 				<div class="card-header"><a href="/imagefolder/<%=assignment.getFilePath()%>"

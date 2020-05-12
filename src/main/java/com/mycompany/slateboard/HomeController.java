@@ -25,17 +25,11 @@ import com.mycompany.slateboard.pojo.Professor;
 import com.mycompany.slateboard.pojo.Student;
 import com.mycompany.slateboard.pojo.TeachingAssistant;
 
-/**
- * Handles requests for the application home page.
- */
 @Controller
 public class HomeController {
 
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
-	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		return "index";
@@ -159,7 +153,6 @@ public class HomeController {
 				}
 				
 			} else if(login_role.equals("teaching_assistant")) {
-				//to be implemented
 				TeachingAssistantDao teachingAssistantDao = new TeachingAssistantDao();
 				String email = request.getParameter("login_email");
 				String password = request.getParameter("login_password");
